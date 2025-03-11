@@ -83,10 +83,10 @@ const RoutesMap: FC<{ drop: any, pickup: any }> = ({ drop, pickup }) => {
                         origin={pickup}
                         destination={drop}
                         apikey={apiKey}
-                        strokeWidth={5}
-                        precision='high'                                            //Billing will be high if the value is high
+                        strokeWidth={3}
+                        precision='low'                                            //Billing will be high if the value is high
                         onReady={()=>fitToMarkersWithDelay()}
-                        strokeColor='black'                                         //Router color
+                        strokeColor='red'                                         //Router color
                         onError={(err)=>console.log("Directions Error",err)}
                         />
                     )

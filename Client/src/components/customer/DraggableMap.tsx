@@ -78,33 +78,32 @@ const DraggableMap: FC<{ height: number }> = ({ height }) => {
 
     //Simulation of Caption Markers
 
-    useEffect(() => {
-        generateRandomMarkers();
-        // const intervalId = setInterval(() => {
-        //     updateMarkers();
-        // }, 5000);
-        // return () => clearInterval(intervalId);
-    }, [location]);
+    // useEffect(() => {
+    //     generateRandomMarkers();
+    //     const intervalId = setInterval(() => {
+    //     }, 5000);
+    //     return () => clearInterval(intervalId);
+    // }, [location]);
 
-    const generateRandomMarkers = () => {
-        if (!location?.latitude || !location?.longitude || outOfRange) return;
+    // const generateRandomMarkers = () => {
+    //     if (!location?.latitude || !location?.longitude || outOfRange) return;
 
-        const types = ['bike', 'auto', 'cab']
-        const newMarkers = Array.from({ length: 20 }, (_, index) => {
-            const randomType = types[Math.floor(Math.random() * types.length)]
-            const randomRotation = Math.floor(Math.random() * 360)
+    //     const types = ['bike', 'auto', 'cab']
+    //     const newMarkers = Array.from({ length: 20 }, (_, index) => {
+    //         const randomType = types[Math.floor(Math.random() * types.length)]
+    //         const randomRotation = Math.floor(Math.random() * 360)
 
-            return {
-                id: index,
-                latitude: location?.latitude + (Math.random() - 0.5) * 0.01,
-                longitude: location?.longitude + (Math.random() - 0.5) * 0.01,
-                type: randomType,
-                rotation: randomRotation,
-                visible: true,
-            }
-        });
-        setMarkers(newMarkers);
-    }
+    //         return {
+    //             id: index,
+    //             latitude: location?.latitude + (Math.random() - 0.5) * 0.01,
+    //             longitude: location?.longitude + (Math.random() - 0.5) * 0.01,
+    //             type: randomType,
+    //             rotation: randomRotation,
+    //             visible: true,
+    //         }
+    //     });
+    //     setMarkers(newMarkers);
+    // }
 
 
     // const askLocationAccess = async () => {
@@ -142,7 +141,7 @@ const DraggableMap: FC<{ height: number }> = ({ height }) => {
             const location = await Location.getCurrentPositionAsync({})
             const { latitude, longitude } = location.coords;
             mapRef.current?.fitToCoordinates([{ latitude, longitude }], {
-                edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
+                edgePadding: { top: 70, right: 70, bottom: 70, left: 70 },
                 animated: true,
             });
             const address = await reverseGeocode(latitude, longitude);

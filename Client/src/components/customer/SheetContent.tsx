@@ -27,13 +27,6 @@ const SheetContent = () => {
                 <CustomText fontFamily='Medium' fontSize={11}>
                     Explore
                 </CustomText>
-
-                <TouchableOpacity style={commonStyles.flexRow}>
-                    <CustomText fontFamily='Regular' fontSize={10}>
-                        View All
-                    </CustomText>
-                    <Ionicons name='chevron-forward' size={RFValue(14)} color="black" />
-                </TouchableOpacity>
             </View>
             <View style={uiStyles.cubes}>
                 {cubes?.slice(0.4).map((item, index) => (

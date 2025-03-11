@@ -68,45 +68,6 @@ const Main = () => {
         resetAndNavigate('/role');
     }
 
-    //asyncstorage
-    // const tokenCheck = async () => {
-    //     const access_token = await tokenStorage.getItem('access_token'); // Await required
-    //     const refresh_token = await tokenStorage.getItem('refresh_token');
-
-    //     if (access_token) {
-    //         const decodeAccessToken = jwtDecode<DecodedToken>(access_token);
-    //         const decodeRefreshToken = jwtDecode<DecodedToken>(refresh_token || '');
-
-    //         const currentTime = Date.now() / 1000;
-
-    //         if (decodeRefreshToken?.exp < currentTime) {
-    //             resetAndNavigate('/role');
-    //             Alert.alert('Session Expired, Please Login again');
-    //             return;
-    //         }
-
-    //         if (decodeAccessToken?.exp < currentTime) {
-    //             try {
-    //                 await refresh_tokens(); // Await here
-    //             } catch (err) {
-    //                 console.log(err);
-    //                 Alert.alert("Refresh Token Error");
-    //             }
-    //         }
-
-    //         if (user) {
-    //             resetAndNavigate('/customer/home');
-    //         } else {
-    //             resetAndNavigate('/rider/home');
-    //         }
-
-    //         return;
-    //     }
-
-    //     resetAndNavigate('/role');
-    // };
-
-
     useEffect(() => {
         if (loaded && !hasNavigated) {
             const timeoutId = setTimeout(() => {
