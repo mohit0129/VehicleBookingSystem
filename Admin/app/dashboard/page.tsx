@@ -97,8 +97,8 @@ export default function DashboardPage() {
             <DollarSign className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">${stats?.totalRevenue || 0}</div>
-            <p className="text-xs text-muted-foreground">${stats?.monthlyRevenue || 0} this month</p>
+            <div className="text-2xl font-bold">₹{stats?.totalRevenue || 0}</div>
+            <p className="text-xs text-muted-foreground">₹{stats?.monthlyRevenue || 0} this month</p>
           </CardContent>
         </Card>
 

@@ -160,7 +160,7 @@ export default function RidesPage() {
                       <TableCell>{ride.rider?.phone || "Not assigned"}</TableCell>
                       <TableCell className="capitalize">{ride.vehicle}</TableCell>
                       <TableCell className="max-w-[200px] truncate">{ride.pickup?.address}</TableCell>
-                      <TableCell>${ride.fare}</TableCell>
+                      <TableCell>₹{ride.fare}</TableCell>
                       <TableCell>
                         <span
                           className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${getStatusBadgeClass(ride.status)}`}

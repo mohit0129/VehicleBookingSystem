@@ -120,7 +120,7 @@ export default function PaymentDetailPage({ params }: { params: { id: string } }
             </div>
             <div>
               <h3 className="text-sm font-medium text-muted-foreground">Amount</h3>
-              <p className="text-lg font-bold">${payment.amount}</p>
+              <p className="text-lg font-bold">₹{payment.amount}</p>
             </div>
             <div>
               <h3 className="text-sm font-medium text-muted-foreground">Payment Method</h3>

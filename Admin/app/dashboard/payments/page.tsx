@@ -140,7 +140,7 @@ export default function PaymentsPage() {
                       <TableCell>{payment.paymentId}</TableCell>
                       <TableCell>{payment.customerId?.phone || "N/A"}</TableCell>
                       <TableCell>{payment.riderId?.phone || "N/A"}</TableCell>
-                      <TableCell>${payment.amount}</TableCell>
+                      <TableCell>₹{payment.amount}</TableCell>
                       <TableCell className="capitalize">{payment.paymentMethod}</TableCell>
                       <TableCell>
                         <span
