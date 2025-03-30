@@ -177,6 +177,7 @@ export default function RideDetailPage({ params }: { params: { id: string } }) {
                   <SelectItem value="START">Started</SelectItem>
                   <SelectItem value="ARRIVED">Arrived</SelectItem>
                   <SelectItem value="COMPLETED">Completed</SelectItem>
+                  <SelectItem value="CANCELLED">Cancelled</SelectItem>
                 </SelectContent>
               </Select>
             </div>

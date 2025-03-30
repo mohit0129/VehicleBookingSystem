@@ -87,6 +87,8 @@ export default function RidesPage() {
         return "Arrived"
       case "COMPLETED":
         return "Completed"
+      case "CANCELLED":
+        return "Cancelled"
       default:
         return status
     }
@@ -129,6 +131,7 @@ export default function RidesPage() {
                 <SelectItem value="START">Started</SelectItem>
                 <SelectItem value="ARRIVED">Arrived</SelectItem>
                 <SelectItem value="COMPLETED">Completed</SelectItem>
+                <SelectItem value="CANCELLED">Cancelled</SelectItem>
               </SelectContent>
             </Select>
           </div>
